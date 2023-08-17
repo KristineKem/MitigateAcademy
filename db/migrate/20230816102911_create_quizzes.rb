@@ -3,7 +3,6 @@ class CreateQuizzes < ActiveRecord::Migration[6.1]
     create_table :quizzes do |t|
       t.string :title, null: false, index: {unique: true}
       t.timestamps
-
     end
   end
 end

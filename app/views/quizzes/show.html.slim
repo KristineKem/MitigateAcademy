@@ -1,0 +1,12 @@
+h1 = @quiz.title
+
+div = date_in_words(@quiz.created_at)
+
+h3 Questions
+ul
+- @quiz.questions.each do |q|
+  li = q.content
+
+hr
+
+- link_to 'Back to Quizzes', quiz_path 
