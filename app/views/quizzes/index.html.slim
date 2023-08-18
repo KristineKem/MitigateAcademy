@@ -1,6 +1,10 @@
 h1 Quizzes
+h3 Total: 
 = @quizzes.count
 
 ul
 - @quizzes.each do |quiz|
-  li = link_to quiz.title, quizzes_path(quiz)
+  li = link_to quiz.title, quiz_path(quiz)
+
+div 
+= link_to 'New', new_quiz_path
