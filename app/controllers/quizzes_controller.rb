@@ -1,5 +1,5 @@
-class QuizzesController < AllpicationController
-  defore_action :load_quiz, exclude: {:index, :create}
+class QuizzesController < ApplicationController
+  before_action :load_quiz, except: [:index, :create]
 
   #layout 'alternative'
 

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index 
-    render json :ok
+    render json: :ok
 
     
   end
