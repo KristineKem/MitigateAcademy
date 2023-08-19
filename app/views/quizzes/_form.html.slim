@@ -1,0 +1,30 @@
+- quiz.errors.full_messages.each do |err|
+    p (style="color: red") = err
+
+= form_with model: quiz do |form|
+
+  = form.label :title
+  = form.text_field :title, style: "display: block;"
+
+  = form.label :description
+  = form.text_area :description, style: "display: block;"
+
+  = form.label :image
+  = form.file_field :image
+
+  h5 Questions
+ 
+  = form.fields_for :questions do |q_form|
+    fieldset
+      = q_form.label :content
+      = q_form.text_field :content
+
+      = q_form.label :correct_answer
+      = q_form.text_field :correct_answer
+
+      = q_form.label :_destroy
+      = q_form.check_box :_destroy
+
+  = form.button 'New question', name: :add_question, value: '1'
+
+  = form.submit

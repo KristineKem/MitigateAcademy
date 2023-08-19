@@ -1,0 +1,13 @@
+
+
+= form_with model: [question.quiz, question] do |form|
+
+  = form.label :content
+  = form.text_area :content, style: "display: block;"
+
+  = form.label :correct_answer
+  = form.text_area :correct_answer, style: "display: block;"
+
+
+
+  = form.submit
